@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" allow-return-values="true">
+    <parameter name="modifyNameBoard" value="tablero modificado"/>
+    <parameter name="modifyDescBoard" value="tablero modificado descripcion"/>
+    <parameter name="listName" value="Nueva lista"/>
+    <parameter name="modifyNameList" value="Modificamos lista"/>
+    <parameter name="nameCard" value="Pruebas de regresion"/>
+    <parameter name="descCard" value="Pruebas de regresion sobre la version"/>
+    <parameter name="pos" value="top"/>
+    <parameter name="dueComplete" value="false"/>
+    <parameter name="due" value="01/03/2021"/>
+    <parameter name="urlSource" value="www.slack.com"/>
+    <parameter name="modifyNameCard" value="Pruebas V2"/>
+    <test thread-count="5" name="Test">
+        <classes>
+            <class name="testApiTrelloBoards"/>
+        </classes>
+    </test>
+    <test thread-count="5" name="Test Api Trello Lists">
+        <classes>
+            <class name="testApiTrelloListsAndBoards"/>
+        </classes>
+    </test>
+</suite>
